@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AXIS</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="horizontal-line" id="horizontal"></div>
-  <div class="vertical-line" id="vertical"></div>
+<link rel="stylesheet" href="style.css" />
 
+<div class="horizontal-line" id="horizontal"></div>
+
+<!-- ✅ This is the ONLY vertical-line div -->
+<div id="vertical" class="vertical-line">
   <nav class="menu" id="menu">
     <ul>
       <li>About</li>
@@ -19,9 +13,12 @@
       <li>Contact</li>
     </ul>
   </nav>
+</div>
 
-  <div class="scroll-space"></div>
+<img id="house1" class="house-image" src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg" alt="House 1" />
+<img id="house2" class="house-image" src="https://images.pexels.com/photos/247360/pexels-photo-247360.jpeg" alt="House 2">
 
-  <script src="script.js"></script>
-</body>
-</html>
+<div class="scroll-space"></div>
+
+<script src="script.js"></script>
+
