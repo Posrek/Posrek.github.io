@@ -5,9 +5,9 @@
 }
 
 body {
-  background-color: #fefaf0; /* Eggshell white */
+  background-color: #ffffff; /* Pure white */
   font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-  height: 200vh; /* Enough to allow scrolling */
+  height: 100vh; /* Enough to allow scrolling */
   overflow-x: hidden;
 }
 
@@ -17,7 +17,7 @@ body {
   top: 10vh;
   left: 0;
   width: 100%;
-  height: 1px;
+  height: 5px;
   background-color: black;
   opacity: 0.7;
   border-radius: 1px;
@@ -29,7 +29,7 @@ body {
   position: fixed;
   top: 0;
   left: 10vw;
-  width: 1px;
+  width: 5px;
   height: 100%;
   background-color: black;
   opacity: 0.7;
