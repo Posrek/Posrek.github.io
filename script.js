@@ -3,26 +3,41 @@ window.addEventListener('scroll', () => {
   const maxScroll = window.innerHeight;
   const progress = Math.min(scrollTop / maxScroll, 1);
 
-  const horizontal = document.getElementById('horizontal');
   const vertical = document.getElementById('vertical');
-  const menu = document.getElementById('menu');
+  const horizontal = document.getElementById('horizontal');
 
-  // Animate lines positions: 10vh/vw → 90vh/vw
-  const horizontalPos = 10 + 80 * progress; // vh
-  const verticalPos = 10 + 80 * progress;   // vw
-  horizontal.style.top = `${horizontalPos}vh`;
-  vertical.style.left = `${verticalPos}vw`;
+  const verticalX = 10 + 80 * progress;     // 10vw → 90vw
+  const horizontalY = 10 + 80 * progress;   // 10vh → 90vh
 
-  // Calculate menu position:
-  // Horizontally: vertical line position + 1.5vw gap
-  const menuLeft = verticalPos + 1.5; // vw
+  vertical.style.left = `${verticalX}vw`;
+  horizontal.style.top = `${horizontalY}vh`;
 
-  // Vertically: start below horizontal line (horizontalPos + 2vh gap), move up to above it (horizontalPos - 4vh)
-  const startTop = 10 + 2;     // 12vh (start just below 10vh horizontal line)
-  const endTop = 90 - 4;       // 86vh (end just above 90vh horizontal line)
-  const menuTop = startTop + (endTop - startTop) * progress;
+  // Handle multiple images fading evenly across total scroll
+  const images = [
+    document.getElementById('house1'),
+    document.getElementById('house2'),
+    // Add more images if needed
+  ];
 
-  // Set menu position
-  menu.style.left = `${menuLeft}vw`;
-  menu.style.top = `${menuTop}vh`;
+  const overallProgress = Math.min(scrollTop / (window.innerHeight * images.length), 1);
+  const segment = 1 / images.length;
+
+  images.forEach((img, idx) => {
+    const start = idx * segment;
+    const end = start + segment;
+
+    if (overallProgress >= start && overallProgress <= end) {
+      const localProgress = (overallProgress - start) / segment;
+
+      if (localProgress <= 0.5) {
+        img.style.opacity = (localProgress * 2).toString(); // fade in
+      } else {
+        img.style.opacity = ((1 - localProgress) * 2).toString(); // fade out
+      }
+    } else {
+      img.style.opacity = '0';
+    }
+  });
 });
+
+window.dispatchEvent(new Event('scroll'));
