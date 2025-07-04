@@ -57,5 +57,5 @@ body {
 }
 
 .scroll-space {
-  height: 100vh; /* enough scroll to trigger full animation */
+  height: 300vh; /* enough scroll to trigger full animation */
 }
