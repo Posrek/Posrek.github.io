@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Scroll Demo</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AXIS</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="hero">
-    <h1>ARHITEKTURA!</h1>
-  </div>
+  <div class="horizontal-line" id="horizontal"></div>
+  <div class="vertical-line" id="vertical"></div>
 
-  <div class="content" data-aos="fade-up">
-    <h2>SLIKE!</h2>
-    <p>ful slik</p>
-  </div>
+  <nav class="menu" id="menu">
+    <ul>
+      <li>About</li>
+      <li>Gallery</li>
+      <li>Projects</li>
+      <li>Other</li>
+      <li>Contact</li>
+    </ul>
+  </nav>
 
-  <div class="content" data-aos="slide-right">
-    <h2>Kontakt</h2>
-    <p>Mail pa to</p>
-  </div>
+  <div class="scroll-space"></div>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
