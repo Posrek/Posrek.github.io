@@ -41,7 +41,7 @@ body {
 .menu {
   position: fixed;
   top: 10vh;
-  left: 10vw;
+  left: calc(10vw - 200px);
   transform: translateY(10px);
   z-index: 2;
   transition: opacity 0.5s ease-out;
