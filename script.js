@@ -13,7 +13,7 @@ window.addEventListener('scroll', () => {
   vertical.style.left = `${10 + 80 * progress}vw`;   // 10vw → 90vw
 
   // Fade out menu text
-  menu.style.opacity = `${1 - progress}`;
+  // menu.style.opacity = `${1 - progress}`;
 
   // Move menu with vertical line (left of it) and downward (above horizontal)
   const menuLeft = 10 + 80 * progress - 15; // 15vw left of line (adjust spacing)
