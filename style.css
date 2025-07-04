@@ -7,7 +7,7 @@
 body {
   background-color: #ffffff; /* Pure white */
   font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-  height: 100vh; /* Enough to allow scrolling */
+  height: 200vh; /* Enough to allow scrolling */
   overflow-x: hidden;
 }
 
