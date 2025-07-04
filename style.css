@@ -1,21 +1,61 @@
-body {
+* {
   margin: 0;
-  font-family: sans-serif;
-  background: linear-gradient(to bottom, #4e54c8, #8f94fb);
-  color: white;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+body {
+  background-color: #fefaf0; /* Eggshell white */
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  height: 200vh; /* Enough to allow scrolling */
+  overflow-x: hidden;
 }
 
-.content {
-  padding: 100px;
-  background-color: rgba(0, 0, 0, 0.3);
-  margin: 50px;
-  border-radius: 15px;
+/* Horizontal line */
+.horizontal-line {
+  position: fixed;
+  top: 10vh;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  opacity: 0.7;
+  border-radius: 1px;
+  transition: top 0.3s ease-out;
+}
+
+/* Vertical line */
+.vertical-line {
+  position: fixed;
+  top: 0;
+  left: 10vw;
+  width: 1px;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+  border-radius: 1px;
+  transition: left 0.3s ease-out;
+}
+
+/* Navigation text */
+.menu {
+  position: fixed;
+  top: 10vh;
+  left: 10vw;
+  transform: translateY(10px);
+  z-index: 2;
+  transition: opacity 0.5s ease-out;
+}
+
+.menu ul {
+  list-style: none;
+  font-weight: 600;
+  font-size: 1.2em;
+  color: black;
+  line-height: 2em;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.scroll-space {
+  height: 100vh; /* enough scroll to trigger full animation */
 }
